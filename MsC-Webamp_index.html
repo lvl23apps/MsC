@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    <div id="app" style="height: 20vh">
+        <!-- Webamp will attempt to center itself within this div -->
+    </div>
+    <script src="https://unpkg.com/webamp@1.5.0/built/webamp.bundle.min.js"></script>
+    <script src="https://unpkg.com/butterchurn@2.6.7/lib/butterchurn.min.js"></script>
+    <script src="https://unpkg.com/butterchurn-presets@2.4.7/lib/butterchurnPresets.min.js"></script>
+    <script>
+        const Webamp = window.Webamp;
+        new Webamp({
+            initialTracks: [{
+                    metaData: {
+                        artist: "DJ Mike Llama",
+                        title: "Llama Whippin' Intro"
+                    },
+                    // NOTE: Your audio file must be served from the same domain as your HTML
+                    // file, or served with permissive CORS HTTP headers:
+                    // https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
+                    url: "https://cdn.jsdelivr.net/gh/captbaritone/webamp@43434d82cfe0e37286dbbe0666072dc3190a83bc/mp3/llama-2.91.mp3",
+                    duration: 5.322286
+                },
+                    {
+                    metaData: {
+                        artist: "Multinational Synth Corp",
+                        title: "484e4a"
+                    },
+                    url: "https://cdn.jsdelivr.net/gh/lvl23apps/MsC@main/MsC%20music/Organics/1-484e4a.mp3",
+                    duration: 393.33
+                },
+            		{
+                    metaData: {
+                        artist: "Multinational Synth Corp",
+                        title: "Stand Alone Effect"
+                    },
+                    url: "https://cdn.jsdelivr.net/gh/lvl23apps/MsC@main/MsC%20music/Organics/2-Stand%20Alone%20Effect.mp3",
+                    duration: 307.20
+                },
+            		{
+                    metaData: {
+                        artist: "Multinational Synth Corp",
+                        title: "Cloud Eater"
+                    },
+                    url: "https://cdn.jsdelivr.net/gh/lvl23apps/MsC@main/MsC%20music/Organics/3-Cloud%20Eater.mp3",
+                    duration: 303.33
+                },
+            		{
+                    metaData: {
+                        artist: "Multinational Synth Corp",
+                        title: "Comms Traffic"
+                    },
+                    url: "https://cdn.jsdelivr.net/gh/lvl23apps/MsC@main/MsC%20music/Organics/4-comms%20traffic.mp3",
+                    duration: 251.40
+                },
+            		{
+                    metaData: {
+                        artist: "Multinational Synth Corp",
+                        title: "Yeah thats Cat"
+                    },
+                    url: "https://cdn.jsdelivr.net/gh/lvl23apps/MsC@main/MsC%20music/Organics/5-Yeah%20thats%20Cat.mp3",
+                    duration: 574.20
+                },
+            		{
+                    metaData: {
+                        artist: "Multinational Synth Corp",
+                        title: "Vampoto Funk"
+                    },
+                    url: "https://cdn.jsdelivr.net/gh/lvl23apps/MsC@main/MsC%20music/Organics/6-Vampoto%20Funk.mp3",
+                    duration: 369.6
+                },
+            		{
+                    metaData: {
+                        artist: "Multinational Synth Corp",
+                        title: "Hedge Witch"
+                    },
+                    url: "https://cdn.jsdelivr.net/gh/lvl23apps/MsC@main/MsC%20music/Organics/7-Hedge%20Witch.mp3",
+                    duration: 326.4
+                },
+            		{
+                    metaData: {
+                        artist: "Multinational Synth Corp",
+                        title: "Mandelbrot locally connected"
+                    },
+                    url: "https://cdn.jsdelivr.net/gh/lvl23apps/MsC@main/MsC%20music/Organics/8-Mandelbrot%20locally%20connected.mp3",
+                    duration: 154.2
+                },
+            		{
+                    metaData: {
+                        artist: "Multinational Synth Corp",
+                        title: "Why do you Ask"
+                    },
+                    url: "https://cdn.jsdelivr.net/gh/lvl23apps/MsC@main/MsC%20music/Organics/9-Why%20do%20you%20Ask.mp3",
+                    duration: 302.4
+                },
+            		{
+                    metaData: {
+                        artist: "Multinational Synth Corp",
+                        title: "Melting GCC"
+                    },
+                    url: "https://cdn.jsdelivr.net/gh/lvl23apps/MsC@main/MsC%20music/Organics/10-Melting%20GCC.mp3",
+                    duration: 679.8
+                },
+            		{
+                    metaData: {
+                        artist: "Multinational Synth Corp",
+                        title: "Ketamine Infusion"
+                    },
+                    url: "https://cdn.jsdelivr.net/gh/lvl23apps/MsC@main/MsC%20music/Organics/11-ketamine%20infusion.mp3",
+                    duration: 804.6
+                },
+            		{
+                    metaData: {
+                        artist: "Multinational Synth Corp",
+                        title: "Metadata"
+                    },
+                    url: "https://cdn.jsdelivr.net/gh/lvl23apps/MsC@main/MsC%20music/Organics/12-Metadata.mp3",
+                    duration: 394.8
+                },
+            		{
+                    metaData: {
+                        artist: "Multinational Synth Corp",
+                        title: "2AM-zzZZZ"
+                    },
+                    url: "https://cdn.jsdelivr.net/gh/lvl23apps/MsC@main/MsC%20music/Organics/13-2AM-zzZZZ.mp3",
+                    duration: 253.2
+                },
+            		{
+                    metaData: {
+                        artist: "Multinational Synth Corp",
+                        title: "Empty"
+                    },
+                    url: "https://cdn.jsdelivr.net/gh/lvl23apps/MsC@main/MsC%20music/Organics/14-(empty).mp3",
+                    duration: 95.4
+            }],
+            __butterchurnOptions: {
+                importButterchurn: () => Promise.resolve(window.butterchurn),
+                getPresets: () => {
+                    const presets = window.butterchurnPresets.getPresets();
+                    return Object.keys(presets).map((name) => {
+                        return {
+                            name,
+                            butterchurnPresetObject: presets[name]
+                        };
+                    });
+                },
+                butterchurnOpen: true
+            },
+            __initialWindowLayout: {
+                main: { position: { x: 0, y: 0 } },
+                equalizer: { position: { x: 0, y: 116 } },
+                playlist: { position: { x: 0, y: 232 }, size: [0, 4] },
+                milkdrop: { position: { x: 275, y: 0 }, size: [7, 12] }
+            }
+        }).renderWhenReady(document.getElementById('app'));
+    </script>
+</body>
+
+</html>
